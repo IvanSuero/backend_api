@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
-const dataRouter = require("../controllers/dataController")
+const dataRouter = require("../routes/data.routes")
 
 router.get('/data', dataRouter)
 
