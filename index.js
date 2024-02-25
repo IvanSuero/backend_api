@@ -1,16 +1,14 @@
 const express = require("express")
 const app = express()
 
-const dataRouter = require("./routes/data.routes")
-//const columnsRouter = require("./routes/columns")
+const router = require("./routes/router")
 
 require('dotenv').config()
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-app.use("/api/data", dataRouter)
-//app.use("/api/columns", columnsRouter)
+app.use("/api", router)
 
 const PORT = process.env.PORT || 5000
 
