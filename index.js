@@ -1,14 +1,14 @@
 const express = require("express")
 const app = express()
 
+const productsController = require("./productsController")
+
 require('dotenv').config()
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-app.get("/", (req, res) => {
-    res.send("Hello World")
-})
+app.get("/products", productsController.getAll)
 
 const PORT = process.env.PORT || 5000
 
