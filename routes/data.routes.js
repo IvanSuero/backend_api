@@ -5,4 +5,4 @@ const productController = require("../controllers/productController")
 
 router.get("/products", productController.getAll)
 
-module.exports = dataRouter
+module.exports = router
