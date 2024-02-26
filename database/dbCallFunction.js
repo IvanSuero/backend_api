@@ -1,3 +1,5 @@
+const pool = require('../database/dbConfig')
+
 const callDbFunction = async (res, query) => {
   try {
       const [rows, fields] = await pool.query(query);

@@ -1,4 +1,3 @@
-const pool = require('../database/dbConfig')
 const querys = require('../database/querys')
 const callDbFunction = require('../database/dbCallFunction')
 
