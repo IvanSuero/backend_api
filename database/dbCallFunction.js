@@ -9,14 +9,4 @@ const callDbGetFunction = async (res, query) => {
   }
 }
 
-//post function
-const callDbPostFunction = async (res, query, data) => {
-  try {
-      const [rows, fields] = await pool.query(query, data);
-      res.json({ data: rows });
-  } catch (error) {
-      res.json({ error: error.message})
-  }
-}
-
 module.exports = callDbGetFunction
