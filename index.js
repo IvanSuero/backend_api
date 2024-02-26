@@ -10,11 +10,6 @@ app.use(express.json())
 
 app.use("/api", router)
 
-//when hitting any other route, redirect to /data/products
-router.get('*', (req, res) => {
-    res.redirect('/data/products')
-})
-
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => {
