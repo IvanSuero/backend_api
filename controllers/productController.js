@@ -1,5 +1,5 @@
 const querys = require('../database/querys')
-const callDbFunction = require('../database/dbCallFunction')
+const callDbGetFunction = require('../database/dbCallFunction')
 
 const productController = {
     getAllProducts(req, res) {

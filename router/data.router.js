@@ -16,6 +16,9 @@ router.get('/data/suppliersOrders', supplierController.getAllOrders)
 
 router.get('/data/products', productController.getAllProducts)
 
-router.get('/data/transfers', transferController.getAllTransfers)
+//when hitting any other route, redirect to /data/products
+router.get('*', (req, res) => {
+    res.redirect('/data/products')
+})
 
 module.exports = router
