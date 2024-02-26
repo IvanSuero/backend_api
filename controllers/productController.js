@@ -4,9 +4,7 @@ const productsController = {
     async getAll(req, res) {
         try {
             const [rows, fields] = await pool.query("SELECT * FROM products");
-            console.log(rows);
-            console.log(fields);
-            res.json({ products: rows });
+            res.json({ products: rows, fields: fields});
         } catch (error) {
             console.error(error.message)
             res.json({ error: error.message})
