@@ -1,16 +1,19 @@
 const pool = require('../database/dbConfig')
 const querys = require('../database/querys')
 
-const productsController = {
-    async getAll(req, res) {
-        try {
-            const [rows, fields] = await pool.query(querys.getAllProducts);
-            res.json({ products: rows });
-        } catch (error) {
-            console.error(error.message)
-            res.json({ error: error.message})
-        }
+const productController = {
+    getAllProducts(req, res) {
+        callDbFunction(res, querys.getAllProducts)
     }
 }
 
-module.exports = productsController;
+const callDbFunction = async (res, query) => {
+    try {
+        const [rows, fields] = await pool.query(query);
+        res.json({ data: rows });
+    } catch (error) {
+        res.json({ error: error.message})
+    }
+}
+
+module.exports = productController;
