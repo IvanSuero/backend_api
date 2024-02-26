@@ -4,7 +4,6 @@ const router = express.Router()
 const productController = require("../controllers/productController")
 const clientController = require("../controllers/clientController")
 const supplierController = require("../controllers/supplierController")
-const transferController = require("../controllers/transferController")
 
 router.get('/data/clientsList', clientController.getAllClients)
 
