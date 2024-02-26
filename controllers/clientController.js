@@ -3,10 +3,10 @@ const callDbGetFunction = require('../database/dbCallFunction')
 
 const clientController = {
     getAllClients(req, res) {
-        callDbFunction(res, querys.getAllClients)
+        callDbGetFunction(res, querys.getAllClients)
     },
     getAllOrders(req, res) {
-        callDbFunction(res, querys.getAllClientsOrders)
+        callDbGetFunction(res, querys.getAllClientsOrders)
     }
 }
 

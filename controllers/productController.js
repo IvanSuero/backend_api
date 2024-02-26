@@ -3,7 +3,7 @@ const callDbGetFunction = require('../database/dbCallFunction')
 
 const productController = {
     getAllProducts(req, res) {
-        callDbFunction(res, querys.getAllProducts)
+        callDbGetFunction(res, querys.getAllProducts)
     }
 }
 
