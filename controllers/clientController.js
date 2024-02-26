@@ -1,22 +1,12 @@
-const pool = require('../database/dbConfig')
 const querys = require('../database/querys')
+const callDbFunction = require('../database/dbCallFunction')
 
 const clientController = {
-    async getAllClients(req, res) {
-        try {
-            const [rows, fields] = await pool.query(querys.getAllClients);
-            res.json({ data: rows });
-        } catch (error) {
-            res.json({ error: error.message})
-        }
+    getAllClients(req, res) {
+        callDbFunction(res, querys.getAllClients)
     },
-    async getAllOrders(req, res) {
-        try {
-            const [rows, fields] = await pool.query(querys.getAllClientsOrders);
-            res.json({ data: rows });
-        } catch (error) {
-            res.json({ error: error.message})
-        }
+    getAllOrders(req, res) {
+        callDbFunction(res, querys.getAllClientsOrders)
     }
 }
 

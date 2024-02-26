@@ -1,14 +1,9 @@
-const pool = require('../database/dbConfig')
+const callDbFunction = require('../database/dbCallFunction')
 const querys = require('../database/querys')
 
 const transferController = {
-    async getAllTransfers(req, res) {
-        try {
-            const [rows, fields] = await pool.query(querys.getAllTransfers);
-            res.json({ data: rows });
-        } catch (error) {
-            res.json({ error: error.message})
-        }
+    getAllTransfers(req, res) {
+        callDbFunction(res, querys.getAllTransfers)
     }
 }
 
