@@ -7,6 +7,7 @@ const productsController = {
             const [rows, fields] = await pool.query(querys.getAllProducts);
             res.json({ products: rows });
         } catch (error) {
+            console.error(error.message)
             res.json({ error: error.message})
         }
     }

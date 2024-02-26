@@ -8,3 +8,5 @@ const querys = {
     getAllProducts: "SELECT * FROM products",
     getAllTransfers: "SELECT * FROM transfers"
 }
+
+module.exports = querys;
