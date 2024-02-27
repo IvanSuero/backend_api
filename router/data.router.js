@@ -5,7 +5,7 @@ const productController = require("../controllers/productController")
 const clientController = require("../controllers/clientController")
 const supplierController = require("../controllers/supplierController")
 
-router.get('/docs', require('../swagger'))
+router.get('/docs', require('./swagger'))
 
 router.get('/data/clientsList', clientController.getAllClients)
 router.get('/data/clientsList/:id', clientController.getClientById)
