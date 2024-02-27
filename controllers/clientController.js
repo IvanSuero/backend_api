@@ -1,4 +1,4 @@
-const querys = require('../database/querys')
+import { querys, querysWithParams } from '../database/querys'
 const callDbGetFunction = require('../database/dbCallFunction')
 
 const clientController = {
