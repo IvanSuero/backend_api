@@ -10,7 +10,7 @@ router.get('/data/clientsList/:id', clientController.getClientById)
 router.get('/data/clientsList/:name', clientController.getClientByName)
 
 router.get('/data/clientsOrders', clientController.getAllOrders)
-router.get('/data/clientsOrders/:id', clientController.getOrdersById)
+router.get('/data/clientsOrders/:id', clientController.getOrderById)
 router.get('/data/clientsOrders/:clientId', clientController.getOrderByClientId)
 router.get('/data/clientsOrders/:clientName', clientController.getOrderByClientName)
 router.get('/data/clientsOrders/:nProducts', clientController.getOrderByNProducts)
