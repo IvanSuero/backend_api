@@ -5,7 +5,7 @@ const querys = {
     getAllClientsOrders: "SELECT * FROM clients_orders",
     getAllSuppliers: "SELECT * FROM suppliers",
     getAllSuppliersOrders: "SELECT * FROM suppliers_orders",
-    getAllProducts: "SELECT * FROM products"
+    getAllProducts: 'SELECT * FROM products'
 }
 
 const querysWithParams = {
