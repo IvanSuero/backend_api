@@ -14,29 +14,20 @@ app.use("/api", router)
 
 const options = {
     definition: {
-      openapi: "3.1.0",
+      openapi: "3.0.0",
       info: {
-        title: "LogRocket Express API with Swagger",
-        version: "0.1.0",
+        title: "Swagger API",
+        version: "1.0.0",
         description:
           "This is a simple CRUD API application made with Express and documented with Swagger",
-        license: {
-          name: "MIT",
-          url: "https://spdx.org/licenses/MIT.html",
-        },
-        contact: {
-          name: "LogRocket",
-          url: "https://logrocket.com",
-          email: "info@email.com",
-        },
       },
       servers: [
         {
-          url: "http://localhost:3000",
+          url: "https://backend-api-seven-rho.vercel.app/",
         },
       ],
     },
-    apis: ["./routes/*.js"],
+    apis: ["src/**/*.js"],
 }
 
 const specs = swaggerJsdoc(options);
@@ -44,7 +35,7 @@ const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger
 app.use(
   "/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(specs, { explorer: true }, { customCss: CSS_URL })
+  swaggerUi.setup(specs, { customCss: CSS_URL })
 );
 
 const PORT = process.env.PORT || 5000
