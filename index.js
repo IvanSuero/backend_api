@@ -43,7 +43,7 @@ const specs = swaggerJsdoc(options);
 app.use(
   "/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(specs)
+  swaggerUi.setup(specs, { explorer: true })
 );
 
 const PORT = process.env.PORT || 5000
