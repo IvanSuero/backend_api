@@ -2,7 +2,6 @@ const pool = require('../database/dbConfig')
 
 const callDbGetFunction = async (res, query) => {
   try {
-    console.log(query)
       const [rows, fields] = await pool.query(query);
       res.json({ data: rows });
   } catch (error) {
