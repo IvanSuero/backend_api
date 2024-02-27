@@ -1,5 +1,5 @@
 import { querys, querysWithParams } from '../database/querys'
-const callDbGetFunction = require('../database/dbCallFunction')
+import { callDbGetFunction, callDbGetFunctionWithParams } from '../database/dbCallFunction'
 
 const clientController = {
 
@@ -8,10 +8,10 @@ const clientController = {
         callDbGetFunction(res, querys.getAllClients)
     },
     getClientById(req, res) {
-        callDbGetFunction(res, querysWithParams.getClientById, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getClientById, req.params)
     },
     getClientByName(req, res) {
-        callDbGetFunction(res, querysWithParams.getClientByName, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getClientByName, req.params)
     },
 
     // client orders functions
@@ -19,19 +19,19 @@ const clientController = {
         callDbGetFunction(res, querys.getAllClientsOrders)
     },
     getOrderById(req, res) {
-        callDbGetFunction(res, querysWithParams.getAllClientsOrdersProducts, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getAllClientsOrdersProducts, req.params)
     },
     getOrderByClientId(req, res) {
-        callDbGetFunction(res, querysWithParams.getOrderByClientId, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getOrderByClientId, req.params)
     },
     getOrderByClientName(req, res) {
-        callDbGetFunction(res, querysWithParams.getOrderByClientName, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getOrderByClientName, req.params)
     },
     getOrderByNProducts(req, res) {
-        callDbGetFunction(res, querysWithParams.getClientOrderByNProducts, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getClientOrderByNProducts, req.params)
     },
     getOrderByCost(req, res) {
-        callDbGetFunction(res, querysWithParams.getClientOrderByCost, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getClientOrderByCost, req.params)
     }
 }
 

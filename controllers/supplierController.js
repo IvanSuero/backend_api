@@ -1,5 +1,5 @@
 import { querys, querysWithParams } from '../database/querys'
-const callDbGetFunction = require('../database/dbCallFunction')
+import { callDbGetFunction, callDbGetFunctionWithParams } from '../database/dbCallFunction'
 
 const supplierController = {
 
@@ -8,10 +8,10 @@ const supplierController = {
         callDbGetFunction(res, querys.getAllSuppliers)
     },
     getSupplierById(req, res) {
-        callDbGetFunction(res, querysWithParams.getSupplierById, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getSupplierById, req.params)
     },
     getSupplierByName(req, res) {
-        callDbGetFunction(res, querysWithParams.getSupplierByName, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getSupplierByName, req.params)
     },
 
     // supplier orders functions
@@ -19,16 +19,16 @@ const supplierController = {
         callDbGetFunction(res, querys.getAllSuppliersOrders)
     },
     getOrderBySupplierId(req, res) {
-        callDbGetFunction(res, querysWithParams.getOrderBySupplierId, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getOrderBySupplierId, req.params)
     },
     getOrderBySupplierName(req, res) {
-        callDbGetFunction(res, querysWithParams.getOrderBySupplierName, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getOrderBySupplierName, req.params)
     },
     getOrderByNProducts(req, res) {
-        callDbGetFunction(res, querysWithParams.getSupplierOrderByNProducts, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getSupplierOrderByNProducts, req.params)
     },
     getOrderByCost(req, res) {
-        callDbGetFunction(res, querysWithParams.getSupplierOrderByCost, req.params)
+        callDbGetFunctionWithParams(res, querysWithParams.getSupplierOrderByCost, req.params)
     }
 }
 
