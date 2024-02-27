@@ -8,7 +8,6 @@ require('dotenv').config()
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-app.use("/docs", require("./router/swagger"))
 app.use("/api", router)
 
 const PORT = process.env.PORT || 5000
