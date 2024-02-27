@@ -32,7 +32,7 @@ const options = {
       },
       servers: [
         {
-          url: "https://backend-api-seven-rho.vercel.app",
+          url: "http://localhost:3000",
         },
       ],
     },
@@ -40,10 +40,11 @@ const options = {
 }
 
 const specs = swaggerJsdoc(options);
+const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css'
 app.use(
   "/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(specs, { explorer: true })
+  swaggerUi.setup(specs, { explorer: true }, { customCss: CSS_URL })
 );
 
 const PORT = process.env.PORT || 5000
