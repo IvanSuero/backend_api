@@ -10,8 +10,6 @@ require('dotenv').config()
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-
 app.use("/api", router)
 
 const options = {
