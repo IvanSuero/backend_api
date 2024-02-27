@@ -6,6 +6,7 @@ const productController = {
         callDbGetFunction(res, querys.getAllProducts)
     },
     getProductById(req, res) {
+        console.log(req)
         callDbGetFunctionWithParams(res, querysWithParams.getProductById, req.params)
     },
     getProductByName(req, res) {
