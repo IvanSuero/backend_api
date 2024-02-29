@@ -8,7 +8,7 @@ const clientController = {
         callDbGetFunction(res, querys.getAllClients)
     },
     getClientById(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getClientById, req)
+        callDbGetFunctionWithParams(res, 'getClientById', req)
     },
     getClientByName(req, res) {
         callDbGetFunctionWithParams(res, querysWithParams.getClientByName, req.params)
