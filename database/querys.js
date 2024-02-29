@@ -11,7 +11,7 @@ const querys = {
 const querysWithParams = {
     getAllClientsOrdersProducts: 'SELECT * FROM clients_orders_products WHERE order_id =',
     getAllSuppliersOrdersProducts: 'SELECT * FROM suppliers_orders_products WHERE order_id = ',
-    getClientById: 'SELECT * FROM clients WHERE id = ',
+    getClientById: 'SELECT * FROM clients WHERE ',
     getClientByName: 'SELECT * FROM clients WHERE name = ',
     getSupplierById: 'SELECT * FROM suppliers WHERE id = ',
     getSupplierByName: 'SELECT * FROM suppliers WHERE name = ',
