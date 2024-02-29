@@ -14,7 +14,7 @@ const callDbGetFunction = async (res, query) => {
 const callDbGetFunctionWithParams = async (res, query, req) => {
   try {
     queryWithParams = query + "'" + req.params.id + "'";
-      const [rows, fields] = await pool.query("SELECT * FROM clients WHERE id = '"+ req.params.id +"'");
+      const [rows, fields] = await pool.query(querysWithParams.getClientById + "'" + req.params.id +"'");
       res.json({ data: rows });
   } catch (error) {
       res.json({ error: error.message})
