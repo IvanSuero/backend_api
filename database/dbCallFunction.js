@@ -11,12 +11,13 @@ const callDbGetFunction = async (res, query) => {
   }
 }
 
-const callDbGetFunctionWithParams = async (res, query, param, req) => {
+const callDbGetFunctionWithParams = async (res, query, params) => {
   try {
-      const [rows, fields] = await pool.query(querysWithParams[query] + param + " = '" + req.params.id +"'");
-      res.json({ data: rows, query: querysWithParams[query] + param + " = '" + req.params.id +"'"});
+      const key = Object.keys(params)[0];      
+      const [rows, fields] = await pool.query(querysWithParams[query] + key + " = '" + params[key] + "'");
+      res.json({ data: rows, query: querysWithParams[query] + key + " = '" + params[key] + "'" });
   } catch (error) {
-      res.json({ error: error.message})
+      res.json({ error: error.message })
   }
 }
 

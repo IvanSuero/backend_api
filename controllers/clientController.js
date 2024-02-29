@@ -8,10 +8,13 @@ const clientController = {
         callDbGetFunction(res, querys.getAllClients)
     },
     getClientById(req, res) {
-        callDbGetFunctionWithParams(res, 'getClientById', 'id', req)
+        const params = {
+            id: req.params.id
+        }
+        callDbGetFunctionWithParams(res, 'getClientById', params)
     },
     getClientByName(req, res) {
-        callDbGetFunctionWithParams(res, 'getClientByName', 'name', req.params)
+        callDbGetFunctionWithParams(res, getClientByName, req.params)
     },
 
     // client orders functions
