@@ -75,14 +75,14 @@ export const columns = {
       {
         name: 'contact_email',
         label: 'Email',
-        field: 'email',
+        field: 'contact_email',
         align: 'left',
         sortable: false
       },
       {
         name: 'contact_phone',
-        label: 'Budget',
-        field: 'budget',
+        label: 'Phone',
+        field: 'contact_phone',
         align: 'left',
         sortable: true
       }
