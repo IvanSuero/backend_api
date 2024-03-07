@@ -6,7 +6,7 @@ const clientController = require("../controllers/clientController")
 const supplierController = require("../controllers/supplierController")
 
 router.get('/data/clientsList', clientController.getAllClients) //funciona
-router.get('/data/clientsList/:id', clientController.getClientById)
+router.get('/data/clientsList/id', clientController.getClientById)
 router.get('/data/clientsList/:name', clientController.getClientByName)
 
 router.get('/data/clientsOrders', clientController.getAllOrders) //funciona
@@ -35,5 +35,7 @@ router.get('/data/products/:sellPrice', productController.getProductBySellPrice)
 router.get('/data/products/:volume', productController.getProductByVolume)
 router.get('/data/products/:weight', productController.getProductByWeight)
 router.get('/data/products/:supplierId', productController.getProductBySupplierId)
+
+router.get('/columns', res.json({columns: [{clientsList: ["id", "name", "contact_email", "contact_phone"]}]}))
 
 module.exports = router
