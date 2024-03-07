@@ -15,9 +15,16 @@ export const columns = {
         sortable: false
       },
       {
-        name: 'price',
-        label: 'Price',
-        field: 'price',
+        name: 'buy_price',
+        label: 'Buy Price',
+        field: 'buy_price',
+        align: 'left',
+        sortable: true
+      },
+      {
+        name: 'sell_price',
+        label: 'Sell Price',
+        field: 'sell_price',
         align: 'left',
         sortable: true
       },
@@ -27,9 +34,37 @@ export const columns = {
         field: 'stock',
         align: 'left',
         sortable: true
+      },
+      {
+        name: 'volume',
+        label: 'Volume',
+        field: 'volume',
+        align: 'left',
+        sortable: true
+      },
+      {
+        name: 'weight',
+        label: 'Weight',
+        field: 'weight',
+        align: 'left',
+        sortable: true
+      },
+      {
+        name: 'supplier_id',
+        label: 'Supplier ID',
+        field: 'supplier_id',
+        align: 'left',
+        sortable: true
       }
     ],
     'clientsList': [
+      {
+        name: 'id',
+        label: 'ID',
+        field: 'id',
+        align: 'left',
+        sortable: true
+      },
       {
         name: 'name',
         label: 'Name',
@@ -38,14 +73,14 @@ export const columns = {
         sortable: true
       },
       {
-        name: 'email',
+        name: 'contact_email',
         label: 'Email',
         field: 'email',
         align: 'left',
         sortable: false
       },
       {
-        name: 'budget',
+        name: 'contact_phone',
         label: 'Budget',
         field: 'budget',
         align: 'left',
