@@ -1,5 +1,6 @@
 const express = require("express")
 const router = express.Router()
+const columns = require("../sampleColumns")
 
 const productController = require("../controllers/productController")
 const clientController = require("../controllers/clientController")
@@ -36,6 +37,6 @@ router.get('/data/products/:volume', productController.getProductByVolume)
 router.get('/data/products/:weight', productController.getProductByWeight)
 router.get('/data/products/:supplierId', productController.getProductBySupplierId)
 
-router.get('/columns', (req, res) => res.json({columns: [{clientsList: ["id", "name", "contact_email", "contact_phone"]}]}))
+router.get('/columns', (req, res) => res.json({columns: columns}))
 
 module.exports = router
