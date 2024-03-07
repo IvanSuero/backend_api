@@ -1,7 +1,5 @@
-export const columns = [
-  {
-    areaColumns: 'products',
-    columns: [
+export const columns = {
+    'products': [
       {
         name: 'reference',
         label: 'Reference',
@@ -31,60 +29,7 @@ export const columns = [
         sortable: true
       }
     ],
-    actions: [
-      {
-        name: 'add',
-        label: 'Add',
-        edit: true,
-        empty: true,
-        buttons: [
-          {
-            confirmBtn: 'Add new Product',
-            cancelBtn: 'Cancel'
-          }
-        ]
-      },
-      {
-        name: 'edit',
-        label: 'Edit',
-        edit: true,
-        empty: false,
-        buttons: [
-          {
-            confirmBtn: 'Save',
-            cancelBtn: 'Cancel'
-          }
-        ]
-      },
-      {
-        name: 'delete',
-        label: 'Delete',
-        edit: false,
-        empty: false,
-        buttons: [
-          {
-            confirmBtn: 'Delete',
-            cancelBtn: 'Cancel'
-          }
-        ]
-      },
-      {
-        name: 'view',
-        label: 'View',
-        edit: false,
-        empty: false,
-        buttons: [
-          {
-            confirmBtn: 'Close',
-            cancelBtn: ''
-          }
-        ]
-      }
-    ]
-  },
-  {
-    areaColumns: 'clientslist',
-    columns: [
+    'clientsList': [
       {
         name: 'name',
         label: 'Name',
@@ -107,60 +52,7 @@ export const columns = [
         sortable: true
       }
     ],
-    actions: [
-      {
-        name: 'add',
-        label: 'Add',
-        edit: true,
-        empty: true,
-        buttons: [
-          {
-            confirmBtn: 'Add new Client',
-            cancelBtn: 'Cancel'
-          }
-        ]
-      },
-      {
-        name: 'edit',
-        label: 'Edit',
-        edit: true,
-        empty: false,
-        buttons: [
-          {
-            confirmBtn: 'Save',
-            cancelBtn: 'Cancel'
-          }
-        ]
-      },
-      {
-        name: 'delete',
-        label: 'Delete',
-        edit: false,
-        empty: false,
-        buttons: [
-          {
-            confirmBtn: 'Delete',
-            cancelBtn: 'Cancel'
-          }
-        ]
-      },
-      {
-        name: 'view',
-        label: 'View',
-        edit: false,
-        empty: false,
-        buttons: [
-          {
-            confirmBtn: 'Close',
-            cancelBtn: ''
-          }
-        ]
-      }
-    ]
-  },
-  {
-    areaColumns: 'sellorders',
-    columns: [
+    'sellorders': [
       {
         name: 'orderid',
         label: 'Order ID',
@@ -196,32 +88,5 @@ export const columns = [
         align: 'right',
         sortable: true
       }
-    ],
-    actions: [
-      {
-        name: 'add',
-        label: 'Create',
-        edit: true,
-        empty: true,
-        buttons: [
-          {
-            confirmBtn: 'Create Sell Order',
-            cancelBtn: 'Cancel'
-          }
-        ]
-      },
-      {
-        name: 'view',
-        label: 'View',
-        edit: false,
-        empty: false,
-        buttons: [
-          {
-            confirmBtn: 'Close',
-            cancelBtn: ''
-          }
-        ]
-      }
     ]
-  }
-]
+}
