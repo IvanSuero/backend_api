@@ -4,7 +4,10 @@ import { callDbGetFunction, callDbGetFunctionWithParams } from '../database/dbCa
 const productController = {
     getAllProducts(req, res) {
         callDbGetFunction(res, querys.querys.getAllProducts)
-    }
+    },
+    getProductById(req, res) {
+        console.log(req.body)
+    },
 }
 
 module.exports = productController;
