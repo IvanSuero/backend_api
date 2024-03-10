@@ -5,7 +5,7 @@ const querys = {
         getAllProducts: 'SELECT * FROM products'
     },
     withParams: {
-        getProductById: 'SELECT * FROM products WHERE reference = ',
+        getProductById: 'SELECT * FROM products WHERE reference = ?',
         getProductByName: 'SELECT * FROM products WHERE description = ',
         getProductByStock: 'SELECT * FROM products WHERE stock = ',
         getProductByBuyPrice: 'SELECT * FROM products WHERE buy_price = ',

@@ -12,7 +12,7 @@ const callDbGetFunction = async (res, query) => {
 
 const callDbGetFunctionWithParams = async (res, query, params) => {
   try {      
-      const [rows, fields] = await pool.query(query + "'" + params+ "'");
+      const [rows, fields] = await pool.query(query, [params.reference]);
       console.log({ data: rows, key: key, value: params[key]})
       res.json({ data: rows, key: key, value: params[key]});
   } catch (error) {
