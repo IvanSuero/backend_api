@@ -5,7 +5,7 @@ const columns = require("../sampleColumns")
 const productController = require("../controllers/productController")
 
 router.get('/products', productController.getAllProducts)
-router.post('/products', productController.getProductById)
+router.get('/products/:id', productController.getProductById)
 
 router.get('/columns', (req, res) => res.json({columns: columns}))
 
