@@ -1,5 +1,4 @@
 const pool = require('../database/dbConfig');
-const { querysWithParams } = require('./querys');
 
 const callDbGetFunction = async (res, query) => {
   try {
@@ -12,9 +11,8 @@ const callDbGetFunction = async (res, query) => {
 }
 
 const callDbGetFunctionWithParams = async (res, query, params) => {
-  try {
-      const key = Object.keys(params)[0];      
-      const [rows, fields] = await pool.query(querysWithParams[query] + key + " = '" + params[key] + "'");
+  try {      
+      const [rows, fields] = await pool.query(query + "'" + params+ "'");
       res.json({ data: rows, key: key, value: params[key]});
   } catch (error) {
       res.json({ error: error.message })
