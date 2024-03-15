@@ -7,27 +7,6 @@ const productController = {
     },
     getProductById(req, res) {
         callDbGetFunctionWithParams(res, querysWithParams.getProductById, req.body.id)
-    },
-    getProductByName(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getProductByName, req.params)
-    },
-    getProductByStock(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getProductByStock, req.params)
-    },
-    getProductByBuyPrice(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getProductByBuyPrice, req.params)
-    },
-    getProductBySellPrice(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getProductBySellPrice, req.params)
-    },
-    getProductByVolume(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getProductByVolume, req.params)
-    },
-    getProductByWeight(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getProductByWeight, req.params)
-    },
-    getProductBySupplierId(req, res) {
-        callDbGetFunctionWithParams(res, querysWithParams.getProductBySupplierId, req.params)
     }
 }
 
