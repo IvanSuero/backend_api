@@ -16,21 +16,6 @@ const productController = {
             case 'stock':
                 callDbGetFunctionWithParams(res, 'getProductByStock', req.body.param)
                 break;
-            case 'buy_price':
-                callDbGetFunctionWithParams(res, 'getProductByBuyPrice', req.body.param)
-                break;
-            case 'sell_price':
-                callDbGetFunctionWithParams(res, 'getProductBySellPrice', req.body.param)
-                break;
-            case 'volume':
-                callDbGetFunctionWithParams(res, 'getProductByVolume', req.body.param)
-                break;
-            case 'weight':
-                callDbGetFunctionWithParams(res, 'getProductByWeight', req.body.param)
-                break;
-            case 'supplier_id':
-                callDbGetFunctionWithParams(res, 'getProductBySupplierId', req.body.param)
-                break;
             default:
                 res.json({ error: 'Invalid parameter' })
         }
