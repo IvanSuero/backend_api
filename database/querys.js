@@ -9,22 +9,6 @@ const querys = {
 }
 
 const querysWithParams = {
-    getAllClientsOrdersProducts: 'SELECT * FROM clients_orders_products WHERE order_id =',
-    getAllSuppliersOrdersProducts: 'SELECT * FROM suppliers_orders_products WHERE order_id = ',
-    getClientById: 'SELECT * FROM clients WHERE ',
-    getClientByName: 'SELECT * FROM clients WHERE name = ',
-    getSupplierById: 'SELECT * FROM suppliers WHERE id = ',
-    getSupplierByName: 'SELECT * FROM suppliers WHERE name = ',
-    getClientOrderById: 'SELECT * FROM clients_orders WHERE order_id = ',
-    getOrderByClientId: 'SELECT * FROM clients_orders WHERE client_id = ',
-    getOrderByClientName: 'SELECT * FROM clients_orders WHERE client_name = ',
-    getClientOrderByNProducts: 'SELECT * FROM clients_orders WHERE n_products = ',
-    getClientOrderByCost: 'SELECT * FROM clients_orders WHERE cost = ',
-    getSupplierOrderById: 'SELECT * FROM suppliers_orders WHERE order_id = ',
-    getOrderBySupplierId: 'SELECT * FROM suppliers_orders WHERE supplier_id = ',
-    getOrderBySupplierName: 'SELECT * FROM suppliers_orders WHERE supplier_name = ',
-    getSupplierOrderByNProducts: 'SELECT * FROM suppliers_orders WHERE n_products = ',
-    getSupplierOrderByCost: 'SELECT * FROM suppliers_orders WHERE cost = ',
     getProductById: 'SELECT * FROM products WHERE reference = ',
     getProductByName: 'SELECT * FROM products WHERE description = ',
     getProductByStock: 'SELECT * FROM products WHERE stock = ',
