@@ -48,13 +48,6 @@ export const columns = {
         field: 'weight',
         align: 'left',
         sortable: true
-      },
-      {
-        name: 'supplier_id',
-        label: 'Supplier ID',
-        field: 'supplier_id',
-        align: 'left',
-        sortable: true
       }
     ]
 }
