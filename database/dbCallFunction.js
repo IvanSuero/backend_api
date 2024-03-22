@@ -11,14 +11,14 @@ const callDbGetFunction = async (res, query) => {
   }
 }
 
-const callDbGetFunctionWithParams = async (res, query, params) => {
+const callInsertFunction = async (res, query, params) => {
   try {    
-      console.log(querysWithParams[query])
-      const [rows, fields] = await pool.query(querysWithParams[query] + "'" + params + "'")
+      console.log(query)
+      const [rows, fields] = await pool.query(query, params);
       res.json({ data: rows});
   } catch (error) {
       res.json({ error: error.message })
   }
 }
 
-module.exports = { callDbGetFunction, callDbGetFunctionWithParams }
+module.exports = { callDbGetFunction, callInsertFunction }
