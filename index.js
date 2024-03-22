@@ -5,7 +5,10 @@ const app = express()
 const router = require("./router/data.router")
 
 const cors = require("cors")
-app.use(cors())
+const corsOptions = {
+    origin: "http://localhost:9000"
+}
+app.use(cors(corsOptions))
 
 require('dotenv').config()
 
