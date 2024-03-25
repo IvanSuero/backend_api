@@ -6,7 +6,8 @@ export const columns = {
         field: 'reference',
         align: 'left',
         sortable: true,
-        visible: true
+        visible: true,
+        rules: '[value => !!value || "Required."]'
       },
       {
         name: 'description',
@@ -14,7 +15,8 @@ export const columns = {
         field: 'description',
         align: 'left',
         sortable: false,
-        visible: true
+        visible: true,
+        rules: '[value => !!value || "Required."]'
       },
       {
         name: 'buy_price',
@@ -22,7 +24,8 @@ export const columns = {
         field: 'buy_price',
         align: 'left',
         sortable: true,
-        visible: false
+        visible: false,
+        rules: '[value => !!value || "Required."]'
       },
       {
         name: 'sell_price',
@@ -30,7 +33,8 @@ export const columns = {
         field: 'sell_price',
         align: 'left',
         sortable: true,
-        visible: false
+        visible: false,
+        rules: '[value => !!value || "Required."]'
       },
       {
         name: 'stock',
@@ -38,7 +42,8 @@ export const columns = {
         field: 'stock',
         align: 'left',
         sortable: true,
-        visible: true
+        visible: true,
+        rules: '[value => !!value || "Required."]'
       },
       {
         name: 'volume',
