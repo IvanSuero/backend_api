@@ -7,7 +7,7 @@ export const columns = {
         align: 'left',
         sortable: true,
         visible: true,
-        rules: '[value => !!value || "Required."]'
+        rules: [value => !!value || 'Required.']
       },
       {
         name: 'description',
@@ -16,7 +16,7 @@ export const columns = {
         align: 'left',
         sortable: false,
         visible: true,
-        rules: '[value => !!value || "Required."]'
+        rules: [value => !!value || 'Required.']
       },
       {
         name: 'buy_price',
@@ -25,7 +25,7 @@ export const columns = {
         align: 'left',
         sortable: true,
         visible: false,
-        rules: '[value => !!value || "Required."]'
+        rules: [value => !!value || 'Required.']
       },
       {
         name: 'sell_price',
@@ -34,7 +34,7 @@ export const columns = {
         align: 'left',
         sortable: true,
         visible: false,
-        rules: '[value => !!value || "Required."]'
+        rules: [value => !!value || 'Required.']
       },
       {
         name: 'stock',
@@ -43,7 +43,7 @@ export const columns = {
         align: 'left',
         sortable: true,
         visible: true,
-        rules: '[value => !!value || "Required."]'
+        rules: [value => !!value || 'Required.']
       },
       {
         name: 'volume',
@@ -51,7 +51,8 @@ export const columns = {
         field: 'volume',
         align: 'left',
         sortable: true,
-        visible: false
+        visible: false,
+        rules: [value => !!value || 'Required.']
       },
       {
         name: 'weight',
@@ -59,7 +60,8 @@ export const columns = {
         field: 'weight',
         align: 'left',
         sortable: true,
-        visible: false
+        visible: false,
+        rules: [value => !!value || 'Required.']
       }
     ]
 }
