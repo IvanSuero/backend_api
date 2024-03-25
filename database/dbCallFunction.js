@@ -1,5 +1,4 @@
 const pool = require('../database/dbConfig');
-const { querysWithParams } = require('./querys');
 
 const callDbGetFunction = async (res, query) => {
   try {

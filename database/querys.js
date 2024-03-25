@@ -6,6 +6,5 @@ const querys = {
 }
 
 module.exports = {
-    querys,
-    querysWithParams
+    querys
 }
